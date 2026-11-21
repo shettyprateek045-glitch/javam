@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ExamOptima – 3D Next-Gen Examination Seating Suite</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-layout">
+    <!-- Collapsible 3D Glass Sidebar -->
+    <aside class="app-sidebar" id="appSidebar">
+      <div class="sidebar-brand">
+        <div class="brand">
+          <div class="logo-3d">
+            <span class="logo-core">EO</span>
+            <div class="logo-glow"></div>
+          </div>
+          <div class="brand-text">
+            <h1>ExamOptima</h1>
+            <p>Admin Suite 3D</p>
+          </div>
+        </div>
+        <button id="sidebarToggle" class="sidebar-toggle-btn" title="Toggle Sidebar">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+      </div>
+
+      <div class="sidebar-nav-wrap">
+        <nav class="nav" aria-label="Main">
+          <a href="#dashboard" data-nav="dashboard">
+            <span class="nav-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></span>
+            <span class="nav-text">Dashboard</span>
+          </a>
+          <a href="#students" data-nav="students">
+            <span class="nav-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></span>
+            <span class="nav-text">Students</span>
+          </a>
+          <a href="#classrooms" data-nav="classrooms">
+            <span class="nav-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg></span>
+            <span class="nav-text">Classrooms</span>
+          </a>
+          <a href="#exams" data-nav="exams">
+            <span class="nav-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></span>
+            <span class="nav-text">Examinations</span>
+          </a>
+          <a href="#registrations" data-nav="registrations">
+            <span class="nav-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><polyline points="16 11 18 13 22 9"></polyline></svg></span>
+            <span class="nav-text">Registrations</span>
+          </a>
+          <a href="#seating" data-nav="seating">
+            <span class="nav-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 18v3"></path><path d="M20 18v3"></path><path d="M19 10v4H5v-4"></path><path d="M5 18h14a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2z"></path></svg></span>
+            <span class="nav-text">Seating</span>
+          </a>
+          <a href="#layout" data-nav="layout">
+            <span class="nav-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg></span>
+            <span class="nav-text">Layout</span>
+          </a>
+          <a href="#conflicts" data-nav="conflicts">
+            <span class="nav-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></span>
+            <span class="nav-text">Conflicts</span>
+          </a>
+          <a href="#reports" data-nav="reports">
+            <span class="nav-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg></span>
+            <span class="nav-text">Reports</span>
+          </a>
+        </nav>
+      </div>
+
+      <div class="sidebar-footer">
+        <div class="sys-pill">
+          <span class="pulse-dot"></span>
+          <span class="sys-text">SaaS Engine Online</span>
+        </div>
+      </div>
+    </aside>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content Shell -->
+    <div class="app-main">
+      <header class="topbar">
+        <div class="topbar-left">
+          <button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Toggle Menu">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          </button>
+          <div class="topbar-breadcrumb">
+            <span class="bc-root">Platform</span>
+            <span class="bc-sep">/</span>
+            <span class="bc-current" id="currentViewName">Dashboard</span>
+          </div>
+        </div>
+        <div class="topbar-center">
+          <div class="cyber-search-pill" title="Press Ctrl+K to jump">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <input type="text" id="globalQuickSearch" placeholder="Command Palette / Jump to..." readonly />
+            <kbd>Ctrl+K</kbd>
+          </div>
+        </div>
+        <div class="topbar-right">
+          <!-- User info appended here by extras2.js -->
+        </div>
+      </header>
+
+      <main class="container">
+    <section id="view-dashboard" class="view" hidden>
+      <div class="view-head"><h2>Dashboard</h2></div>
+      <div class="stats">
+        <div class="stat"><span class="stat-label">Total classroom capacity</span><span class="stat-value" id="st_capacity">0</span><span class="stat-sub">seats across all classrooms</span></div>
+        <div class="stat"><span class="stat-label">Available seats</span><span class="stat-value" id="st_available">0</span><span class="stat-sub" id="st_available_sub"></span></div>
+        <div class="stat"><span class="stat-label">Classrooms</span><span class="stat-value" id="st_rooms">0</span><span class="stat-sub" id="st_buildings"></span></div>
+        <div class="stat"><span class="stat-label">Students</span><span class="stat-value" id="st_students">0</span><span class="stat-sub">in Student Management</span></div>
+        <div class="stat"><span class="stat-label">Examinations</span><span class="stat-value" id="st_exams">0</span><span class="stat-sub" id="st_exams_sub"></span></div>
+        <div class="stat"><span class="stat-label">Exam registrations</span><span class="stat-value" id="st_regs">0</span><span class="stat-sub">student registrations in total</span></div>
+        <div class="stat"><span class="stat-label">Completed seating arrangements</span><span class="stat-value" id="st_seated">0</span><span class="stat-sub" id="st_seated_sub"></span></div>
+      </div>
+      <section class="panel" style="margin-top:18px"><h3 style="margin:0">Recent activities</h3><ul id="recentAct" class="activity"></ul></section>
+      <div hidden>
+      </div>
+    </section>
+    <section id="view-students" class="view" hidden>
+      <div class="view-head">
+        <h2>Student Management</h2>
+        <button id="addBtn" class="btn btn-primary">+ Add Student</button>
+      </div>
+    <section class="toolbar">
+      <div class="field grow">
+        <label for="searchInput">Search</label>
+        <input id="searchInput" type="search" placeholder="Search by ID, USN, name, email, department, subject…" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="deptFilter">Department</label>
+        <select id="deptFilter"></select>
+      </div>
+      <div class="field">
+        <label for="pageSize">Rows per page</label>
+        <select id="pageSize">
+          <option value="all" selected>All</option>
+          <option value="10">10</option>
+          <option value="25">25</option>
+        </select>
+      </div>
+      <div class="field actions">
+        <button id="clearBtn" class="btn btn-ghost">Clear filters</button>
+        <button id="resetBtn" class="btn btn-ghost" title="Discard all changes and reload the original CSV data">Reset data</button>
+      </div>
+    </section>
+
+    <p id="summary" class="summary" aria-live="polite"></p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Student ID</th>
+            <th>USN</th>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Semester</th>
+            <th>Email</th>
+            <th>Subject</th>
+            <th class="col-actions">Actions</th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+      <div id="emptyState" class="empty" hidden>No students match your search or filter.</div>
+    </div>
+
+    <nav id="pager" class="pager" aria-label="Pagination" hidden>
+      <button id="prevBtn" class="btn btn-ghost">‹ Prev</button>
+      <span id="pageInfo"></span>
+      <button id="nextBtn" class="btn btn-ghost">Next ›</button>
+    </nav>
+  </section>
+    <section id="view-classrooms" class="view" hidden>
+      <div class="view-head">
+        <h2>Classroom Management</h2>
+        <button id="addClassBtn" class="btn btn-primary">+ Add Classroom</button>
+      </div>
+      <section class="toolbar">
+        <div class="field grow">
+          <label for="classSearch">Search</label>
+          <input id="classSearch" type="search" placeholder="Search by name, room number or building…" autocomplete="off" />
+        </div>
+        <div class="field">
+          <label for="buildingFilter">Building</label>
+          <select id="buildingFilter"></select>
+        </div>
+        <div class="field actions">
+          <button id="classClearBtn" class="btn btn-ghost">Clear filters</button>
+        </div>
+      </section>
+      <p id="classSummary" class="summary" aria-live="polite"></p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Classroom Name</th>
+              <th>Room No.</th>
+              <th>Building</th>
+              <th>Seating Capacity</th>
+              <th>Available Seats</th>
+              <th class="col-actions">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="classBody"></tbody>
+        </table>
+        <div id="classEmpty" class="empty" hidden>No classrooms found.</div>
+      </div>
+    </section>
+    <section id="view-exams" class="view" hidden>
+      <div class="view-head">
+        <h2>Examination Management</h2>
+        <button id="addExamBtn" class="btn btn-primary">+ Add Examination</button>
+      </div>
+      <section class="toolbar">
+        <div class="field grow">
+          <label for="examSearch">Search</label>
+          <input id="examSearch" type="search" placeholder="Search by exam name, subject name or subject code…" autocomplete="off" />
+        </div>
+        <div class="field">
+          <label for="examStatus">Status</label>
+          <select id="examStatus">
+            <option value="ALL">All</option>
+            <option value="Upcoming">Upcoming</option>
+            <option value="Ongoing">Ongoing</option>
+            <option value="Completed">Completed</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="examFrom">Date from</label>
+          <input id="examFrom" type="date" />
+        </div>
+        <div class="field">
+          <label for="examTo">Date to</label>
+          <input id="examTo" type="date" />
+        </div>
+        <div class="field actions">
+          <button id="examClear" class="btn btn-ghost">Clear filters</button>
+        </div>
+      </section>
+      <p id="examSummary" class="summary" aria-live="polite"></p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Exam Name</th><th>Subject Name</th><th>Subject Code</th><th>Exam Date</th>
+              <th>Start</th><th>End</th><th>Duration</th><th>Status</th><th class="col-actions">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="examBody"></tbody>
+        </table>
+        <div id="examEmpty" class="empty" hidden></div>
+      </div>
+    </section>
+
+    <section id="view-registrations" class="view" hidden>
+      <div class="view-head"><h2>Student Exam Registration</h2></div>
+      <section class="toolbar">
+        <div class="field grow">
+          <label for="regExam">Examination</label>
+          <select id="regExam"></select>
+        </div>
+      </section>
+      <p id="regInfo" class="summary"></p>
+      <section id="regPanel" class="panel" hidden>
+        <label for="regUsns">Register students by USN</label>
+        <textarea id="regUsns" rows="3" placeholder="Enter one or more USNs separated by commas, spaces or new lines, e.g. 1RN26CS001, 1RN26CS002"></textarea>
+        <div class="panel-actions">
+          <button id="regBtn" class="btn btn-primary">Register students</button>
+        </div>
+        <div id="regNotice" class="notice" hidden></div>
+      </section>
+      <div id="regListWrap" hidden>
+        <div class="toolbar slim">
+          <div class="field grow">
+            <label for="regSearch">Search registered students</label>
+            <input id="regSearch" type="search" placeholder="Search by USN, name or department…" autocomplete="off" />
+          </div>
+        </div>
+        <p id="regSummary" class="summary" aria-live="polite"></p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>#</th><th>USN</th><th>Name</th><th>Department</th><th>Semester</th><th>Email</th><th class="col-actions">Actions</th></tr>
+            </thead>
+            <tbody id="regBody"></tbody>
+          </table>
+          <div id="regEmpty" class="empty" hidden></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="view-seating" class="view" hidden>
+      <div class="view-head"><h2>Examination Seating Arrangement</h2></div>
+      <section class="toolbar">
+        <div class="field grow">
+          <label for="seatExam">Examination</label>
+          <select id="seatExam"></select>
+        </div>
+        <div class="field actions">
+          <button id="seatGenerate" class="btn btn-primary">Generate seating</button>
+          <button id="seatClear" class="btn btn-ghost">Clear seating</button>
+        </div>
+      </section>
+      <p id="seatInfo" class="summary"></p>
+      <div id="seatNotice" class="notice" hidden></div>
+      <div id="seatStats" class="stats compact" hidden></div>
+      <div id="seatHalls"></div>
+      <div id="seatUnalloc"></div>
+    </section>
+
+    <section id="view-layout" class="view" hidden>
+      <div class="view-head"><h2>Seating Layout</h2></div>
+      <section class="toolbar">
+        <div class="field grow"><label for="layExam">Examination</label><select id="layExam"></select></div>
+        <div class="field"><label for="layHall">Hall</label><select id="layHall"><option value="">All halls</option></select></div>
+      </section>
+      <p id="layInfo" class="summary"></p>
+      <p class="legend"><span class="sw alloc"></span> Allocated <span class="sw"></span> Empty <span class="sw blocked"></span> Unavailable</p>
+      <div id="layDetail" class="notice ok" hidden></div>
+      <div id="layHalls"></div>
+    </section>
+
+    <section id="view-conflicts" class="view" hidden>
+      <div class="view-head"><h2>Conflict Detection</h2><button id="conScan" class="btn btn-primary">Scan again</button></div>
+      <div id="conSummary"></div>
+      <div class="table-wrap" id="conTable" hidden>
+        <table><thead><tr><th>Severity</th><th>Examination</th><th>Problem</th><th>How to resolve</th></tr></thead><tbody id="conBody"></tbody></table>
+      </div>
+    </section>
+
+    <section id="view-reports" class="view" hidden>
+      <div class="view-head"><h2>Reports</h2></div>
+      <section class="toolbar report-controls">
+        <div class="field grow"><label for="repType">Report</label><select id="repType">
+          <option value="hall">Hall-wise seating</option><option value="student">Student-wise seating</option>
+          <option value="exam">Examination-wise</option><option value="occupancy">Classroom occupancy</option>
+          <option value="unalloc">Unallocated students</option><option value="conflicts">Conflicts</option></select></div>
+        <div class="field grow"><label for="repExam">Examination</label><select id="repExam"></select></div>
+        <div class="field actions">
+          <button id="repCsv" class="btn btn-ghost">CSV</button><button id="repXls" class="btn btn-ghost">Excel</button><button id="repPdf" class="btn btn-ghost">PDF / Print</button>
+        </div>
+      </section>
+      <h3 id="repTitle" style="margin:16px 2px 8px"></h3>
+      <div class="table-wrap"><table><thead id="repHead"></thead><tbody id="repBody"></tbody></table><div id="repEmpty" class="empty" hidden></div></div>
+    </section>
+
+  </main>
+  </div><!-- /.app-main -->
+  </div><!-- /.app-layout -->
+
+  <!-- Add / Edit modal -->
+  <div id="formModal" class="modal" hidden>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="formTitle">
+      <h2 id="formTitle">Add Student</h2>
+      <form id="studentForm" novalidate>
+        <div class="grid">
+          <div class="field">
+            <label for="f_id">Student ID</label>
+            <input id="f_id" name="id" type="text" />
+            <small class="error" data-for="id"></small>
+          </div>
+          <div class="field">
+            <label for="f_usn">USN</label>
+            <input id="f_usn" name="usn" type="text" />
+            <small class="error" data-for="usn"></small>
+          </div>
+          <div class="field span2">
+            <label for="f_name">Name</label>
+            <input id="f_name" name="name" type="text" />
+            <small class="error" data-for="name"></small>
+          </div>
+          <div class="field">
+            <label for="f_department">Department</label>
+            <input id="f_department" name="department" type="text" list="deptList" />
+            <datalist id="deptList"></datalist>
+            <small class="error" data-for="department"></small>
+          </div>
+          <div class="field">
+            <label for="f_semester">Semester</label>
+            <input id="f_semester" name="semester" type="number" min="1" max="8" />
+            <small class="error" data-for="semester"></small>
+          </div>
+          <div class="field span2">
+            <label for="f_email">Email</label>
+            <input id="f_email" name="email" type="email" />
+            <small class="error" data-for="email"></small>
+          </div>
+          <div class="field span2">
+            <label for="f_subject">Subject</label>
+            <input id="f_subject" name="subject" type="text" />
+            <small class="error" data-for="subject"></small>
+          </div>
+        </div>
+        <div class="modal-actions">
+          <button type="button" id="cancelBtn" class="btn btn-ghost">Cancel</button>
+          <button type="submit" id="saveBtn" class="btn btn-primary">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Delete confirm modal -->
+  <div id="deleteModal" class="modal" hidden>
+    <div class="modal-card small" role="alertdialog" aria-modal="true" aria-labelledby="delTitle">
+      <h2 id="delTitle">Delete student?</h2>
+      <p id="delText"></p>
+      <div class="modal-actions">
+        <button type="button" id="delCancel" class="btn btn-ghost">Cancel</button>
+        <button type="button" id="delConfirm" class="btn btn-danger">Delete</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Classroom form modal -->
+  <div id="classModal" class="modal" hidden>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="classFormTitle">
+      <h2 id="classFormTitle">Add Classroom</h2>
+      <form id="classForm" novalidate>
+        <div class="grid">
+          <div class="field span2">
+            <label for="c_name">Classroom Name</label>
+            <input id="c_name" type="text" />
+            <small class="error" data-for="c_name"></small>
+          </div>
+          <div class="field">
+            <label for="c_room">Room Number</label>
+            <input id="c_room" type="text" />
+            <small class="error" data-for="c_room"></small>
+          </div>
+          <div class="field">
+            <label for="c_building">Building</label>
+            <input id="c_building" type="text" list="buildingList" />
+            <datalist id="buildingList"></datalist>
+            <small class="error" data-for="c_building"></small>
+          </div>
+          <div class="field">
+            <label for="c_capacity">Seating Capacity</label>
+            <input id="c_capacity" type="number" min="1" max="1000" step="1" />
+            <small class="error" data-for="c_capacity"></small>
+          </div>
+          <div class="field">
+            <label for="c_available">Available Seats</label>
+            <input id="c_available" type="number" min="0" step="1" />
+            <small class="error" data-for="c_available"></small>
+          </div>
+        </div>
+        <div class="modal-actions">
+          <button type="button" id="classCancel" class="btn btn-ghost">Cancel</button>
+          <button type="submit" class="btn btn-primary">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Classroom delete modal -->
+  <div id="classDeleteModal" class="modal" hidden>
+    <div class="modal-card small" role="alertdialog" aria-modal="true" aria-labelledby="cdelTitle">
+      <h2 id="cdelTitle">Delete classroom?</h2>
+      <p id="cdelText"></p>
+      <div class="modal-actions">
+        <button type="button" id="cdelCancel" class="btn btn-ghost">Cancel</button>
+        <button type="button" id="cdelConfirm" class="btn btn-danger">Delete</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Examination form modal -->
+  <div id="examModal" class="modal" hidden>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="examFormTitle">
+      <h2 id="examFormTitle">Add Examination</h2>
+      <form id="examForm" novalidate>
+        <div class="grid">
+          <div class="field span2">
+            <label for="e_name">Exam Name</label>
+            <input id="e_name" type="text" placeholder="e.g. Semester End Examination" />
+            <small class="error" data-for="e_name"></small>
+          </div>
+          <div class="field">
+            <label for="e_subject">Subject Name</label>
+            <input id="e_subject" type="text" />
+            <small class="error" data-for="e_subject"></small>
+          </div>
+          <div class="field">
+            <label for="e_code">Subject Code</label>
+            <input id="e_code" type="text" />
+            <small class="error" data-for="e_code"></small>
+          </div>
+          <div class="field span2">
+            <label for="e_date">Exam Date</label>
+            <input id="e_date" type="date" />
+            <small class="error" data-for="e_date"></small>
+          </div>
+          <div class="field">
+            <label for="e_start">Start Time</label>
+            <input id="e_start" type="time" />
+            <small class="error" data-for="e_start"></small>
+          </div>
+          <div class="field">
+            <label for="e_end">End Time</label>
+            <input id="e_end" type="time" />
+            <small class="error" data-for="e_end"></small>
+          </div>
+          <div class="field span2">
+            <label for="e_duration">Duration (calculated)</label>
+            <input id="e_duration" type="text" readonly placeholder="Set start and end time" />
+          </div>
+        </div>
+        <div class="modal-actions">
+          <button type="button" id="examCancel" class="btn btn-ghost">Cancel</button>
+          <button type="submit" class="btn btn-primary">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Examination delete modal -->
+  <div id="examDeleteModal" class="modal" hidden>
+    <div class="modal-card small" role="alertdialog" aria-modal="true" aria-labelledby="edelTitle">
+      <h2 id="edelTitle">Delete examination?</h2>
+      <p id="edelText"></p>
+      <div class="modal-actions">
+        <button type="button" id="edelCancel" class="btn btn-ghost">Cancel</button>
+        <button type="button" id="edelConfirm" class="btn btn-danger">Delete</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="data.js"></script>
+  <script src="common.js"></script>
+  <script src="app.js"></script>
+  <script src="classrooms.js"></script>
+  <script src="exams.js"></script>
+  <script src="registrations.js"></script>
+  <script src="seating.js"></script>
+  <script src="extras.js"></script>
+  <script src="extras2.js"></script>
+  <script src="enhancements.js"></script>
+</body>
+</html>
