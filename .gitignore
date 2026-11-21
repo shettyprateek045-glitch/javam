@@ -1,0 +1,16 @@
+target/
+.m2/
+*.class
+*.jar
+*.war
+*.ear
+.idea/
+*.iml
+.vscode/
+.settings/
+.project
+.classpath
+.DS_Store
+Thumbs.db
+*.log
+apache-maven-3.9.9/
