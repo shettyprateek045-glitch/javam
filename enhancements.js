@@ -32,10 +32,10 @@
     resize();
 
     var colors = [
-      "rgba(6, 182, 212, ",   // Cyan
-      "rgba(59, 130, 246, ",  // Electric Blue
-      "rgba(139, 92, 246, ",  // Cyber Violet
-      "rgba(99, 102, 241, "   // Indigo
+      "rgba(168, 85, 247, ",  // Light Purple / Violet
+      "rgba(192, 132, 252, ", // Soft Lavender
+      "rgba(139, 92, 246, ",  // Rich Violet
+      "rgba(216, 180, 254, "  // Lilac
     ];
 
     for (var i = 0; i < count; i++) {
