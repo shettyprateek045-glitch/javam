@@ -44,17 +44,6 @@ public class ApiController {
         registrations.clear();
         registrations.addAll(seed.registrations);
         seatingPlans.clear();
-
-        // Pre-allocate EX001 & EX002 to immediately demonstrate 3D seating visuals
-        try {
-            if (!examinations.isEmpty()) {
-                AllocationPlan plan1 = allocationService.executeAllocationPipeline(
-                    examinations.get(0), students, classrooms, registrations, null
-                );
-                seatingPlans.put(examinations.get(0).getId(), plan1);
-            }
-        } catch (Exception ignored) {
-        }
     }
 
     public String handleGetHealth() {
@@ -76,7 +65,7 @@ public class ApiController {
         loadSeedData();
         Map<String, Object> map = new LinkedHashMap<>();
         map.put("success", true);
-        map.put("message", "Loaded 220 students, 6 classrooms, 5 exams, and pre-allocated seating.");
+        map.put("message", "Loaded 220 students, 6 classrooms, and 5 exams.");
         map.put("studentsCount", students.size());
         map.put("classroomsCount", classrooms.size());
         map.put("examinationsCount", examinations.size());

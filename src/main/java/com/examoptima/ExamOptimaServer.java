@@ -37,7 +37,7 @@ public class ExamOptimaServer {
 
     public void start() throws IOException {
         server = HttpServer.create(new InetSocketAddress("0.0.0.0", port), 0);
-        server.setExecutor(Executors.newVirtualThreadPerTaskExecutor()); // Java 21+ Virtual Threads / lightweight async
+        server.setExecutor(Executors.newCachedThreadPool());
 
         // API Handler
         server.createContext("/api", new ApiHandler());

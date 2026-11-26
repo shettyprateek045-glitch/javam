@@ -169,8 +169,16 @@
     '<div class="field span2" id="aNameF"><label for="aName">Full name</label><input id="aName"></div>' +
     '<div class="field span2"><label for="aPass">Password</label><input id="aPass" type="password" autocomplete="current-password"></div>' +
     '<div class="field span2" id="aPass2F"><label for="aPass2">Confirm password</label><input id="aPass2" type="password" autocomplete="new-password"></div></div>' +
-    '<div id="authErr" class="notice error" hidden></div><div class="modal-actions"><button class="btn btn-primary" id="authBtn" type="submit"></button></div></form>', "modal");
+    '<div id="authErr" class="notice error" hidden></div><div class="modal-actions"><button class="btn btn-ghost" id="authBack" type="button">Back to overview</button><button class="btn btn-primary" id="authBtn" type="submit"></button></div></form>', "modal");
   ov.id = "authOverlay"; ov.style.zIndex = 200; ov.style.background = "var(--bg)"; document.body.appendChild(ov);
+  function openLogin() {
+    authMode();
+    ov.hidden = false;
+    $("aUser").focus();
+  }
+  $("overviewLogin").addEventListener("click", openLogin);
+  $("overviewLoginHero").addEventListener("click", openLogin);
+  $("authBack").addEventListener("click", function () { ov.hidden = true; });
   function authMode() {
     var setup = users().length === 0;
     $("authTitle").textContent = setup ? "Create the administrator account" : "ExamOptima sign in";
@@ -198,7 +206,8 @@
   function enter(u) { sessionStorage.setItem(SK, u.username); $("aPass").value = $("aPass2").value = ""; applyRole(); }
   function applyRole() {
     var u = me();
-    ov.hidden = !!u;
+    ov.hidden = true;
+    document.body.classList.toggle("authenticated", !!u);
     document.body.classList.toggle("role-coordinator", !!u && u.role !== "admin");
     document.body.classList.toggle("role-admin", !!u && u.role === "admin");
     $("whoami").textContent = u ? u.name + " (" + (u.role === "admin" ? "Admin" : "Exam Coordinator") + ")" : "";
